@@ -1,4 +1,4 @@
-# Simple-Python-Chatbot
+# Refactor Branch - Desenvolvendo a solucao
 
-Target: creating a simple Python chatbot using natural language processing and deep learning.
+Target: .
 
