@@ -1,0 +1,777 @@
+{
+      "Intents": [
+            {
+                  "tag": "Greeting",
+                  "patterns": [
+                        "Oi",
+                        "E aí",
+                        "Opa",
+                        "Olá",
+                        "Ola, e aí",
+                        "Oba",
+                        "Oba, e aí"
+                  ],
+                  "responses": [
+                        "Oi humano, por favor me diga seu usuário GeniSys",
+                        "Olá humano, por favor me diga seu usuário GeniSys",
+                        "Opa humano, por favor me diga seu usuário GeniSys"
+                  ],
+                  "extension":  {
+                        "function": "",
+                        "entities": false,
+                        "responses": []
+                  },
+                  "conpatterns":  {
+                        "in": "",
+                        "out": "GreetingUserRequest",
+                        "clear": false
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            },
+            {
+                  "tag": "GreetingResponse",
+                  "patterns": [
+                        "Meu usuário é Guilherme",
+                        "Aqui é o Guilherme",
+                        "Eu sou o Guilherme",
+                        "É o Guilherme",
+                        "Meu usuário é Gustavo",
+                        "Aqui é o Gustavo",
+                        "Eu sou o Gustavo",
+                        "É o Gustavo"
+                  ],
+                  "responses": [
+                        "Excelente! Olá <HUMAN>! Como posso ajudar?",
+                        "Bom! Olá <HUMAN>, como posso te ajudar?",
+                        "Legal! Olá <HUMAN>, o que posso fazer por você?",
+                        "OK! Olá <HUMAN>, como posso te ajudar?",
+                        "OK! oi <HUMAN>, o que posso fazer por você?"
+                  ],
+                  "extension":  {
+                        "function": "extensions.gHumans.updateHuman",
+                        "entities": true,
+                        "responses": [
+                              "Hi %%HUMAN%%! How can I help?",
+                              "Hi %%HUMAN%%, how can I help you?",
+                              "Hello %%HUMAN%%, what can I do for you?",
+                              "Hola %%HUMAN%%, how can I help you?",
+                              "OK hi %%HUMAN%%, what can I do for you?"
+                        ]
+                  },
+                  "conpatterns":  {
+                        "in": "GreetingUserRequest",
+                        "out": "",
+                        "clear": true
+                  },
+                  "entityType": "NA",
+                  "entities": [
+                        {
+                              "entity": "HUMAN",
+                              "rangeFrom": 3,
+                              "rangeTo": 4
+                        },
+                        {
+                              "entity": "HUMAN",
+                              "rangeFrom": 2,
+                              "rangeTo": 3
+                        },
+                        {
+                              "entity": "HUMAN",
+                              "rangeFrom": 1,
+                              "rangeTo": 2
+                        },
+                        {
+                              "entity": "HUMAN",
+                              "rangeFrom": 2,
+                              "rangeTo": 3
+                        },
+                        {
+                              "entity": "HUMAN",
+                              "rangeFrom": 3,
+                              "rangeTo": 4
+                        },
+                        {
+                              "entity": "HUMAN",
+                              "rangeFrom": 2,
+                              "rangeTo": 3
+                        },
+                        {
+                              "entity": "HUMAN",
+                              "rangeFrom": 1,
+                              "rangeTo": 2
+                        },
+                        {
+                              "entity": "HUMAN",
+                              "rangeFrom": 2,
+                              "rangeTo": 3
+                        }
+                  ]
+            },
+            {
+                  "tag": "CourtesyGreeting",
+                  "patterns": [
+                        "Como você está?",
+                        "Oi, como vai?",
+                        "Olá, como vai?",
+                        "Ola como vai?",
+                        "Como você está?",
+                        "Espero que você esteja bem?",
+                        "Olá espero que esteja bem?"
+                  ],
+                  "responses": [
+                        "Olá, eu estou ótimo, como você está? Por favor, diga-me seu usuário GeniSys",
+                        "Olá, como vai? Estou ótimo obrigado! Por favor, diga-me seu usuário GeniSys",
+                        "Olá, estou bem obrigado, tudo bem? Por favor, diga-me seu usuário GeniSys",
+                        "Olá, estou ótima, como você está? Por favor, diga-me seu usuário GeniSys",
+                        "Oi, como vai? Estou ótimo obrigado! Por favor, diga-me seu usuário GeniSys",
+                        "Olá, estou bem obrigado, tudo bem? Por favor, diga-me seu usuário GeniSys",
+                        "Olá, tudo bem obrigado, tudo bem? Por favor, diga-me seu usuário GeniSys"
+                  ],
+                  "extension":  {
+                        "function": "",
+                        "entities": false,
+                        "responses": []
+                  },
+                  "conpatterns":  {
+                        "in": "",
+                        "out": "CourtesyGreetingUserRequest",
+                        "clear": true
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            },
+            {
+                  "tag": "CourtesyGreetingResponse",
+                  "patterns": [
+                        "Bem, obrigado! Meu usuário é Guilherme",
+                        "Bem, obrigado! Aqui é o Guilherme",
+                        "Bem, obrigado! Eu sou o Guilherme",
+                        "Bem, obrigado! É o Guilherme",
+                        "Bem, obrigado! Meu usuário é Gustavo",
+                        "Bem, obrigado! Aqui é o Gustavo",
+                        "Bem, obrigado! Eu sou o Gustavo",
+                        "Bem, obrigado! É o Gustavo"
+                  ],
+                  "responses": [
+                        "Excelente! Olá <HUMAN>! Como posso ajudar?",
+                        "Bom! Olá <HUMAN>, como posso te ajudar?",
+                        "Legal! Olá <HUMAN>, o que posso fazer por você?",
+                        "OK! Olá <HUMAN>, como posso te ajudar?",
+                        "OK! oi <HUMAN>, o que posso fazer por você?"
+                  ],
+                  "extension":  {
+                        "function": "extensions.gHumans.updateHuman",
+                        "entities": true,
+                        "responses": [
+                              "Ótimo %%HUMAN%%! Como posso ajudar?",
+                              "Bom %%HUMAN%%, como posso ajudá-lo?",
+                              "Legal %%HUMAN%%, o que posso fazer por você?",
+                              "OK %%HUMAN%%, como posso ajudá-lo?",
+                              "OK oi %%HUMAN%%, o que posso fazer por você?"
+                        ]
+                  },
+                  "conpatterns":  {
+                        "in": "GreetingUserRequest",
+                        "out": "",
+                        "clear": true
+                  },
+                  "entityType": "NA",
+                  "entities": [
+                        {
+                              "entity": "HUMAN",
+                              "rangeFrom": 5,
+                              "rangeTo": 6
+                        },
+                        {
+                              "entity": "HUMAN",
+                              "rangeFrom": 4,
+                              "rangeTo": 5
+                        },
+                        {
+                              "entity": "HUMAN",
+                              "rangeFrom": 3,
+                              "rangeTo": 4
+                        },
+                        {
+                              "entity": "HUMAN",
+                              "rangeFrom": 4,
+                              "rangeTo": 5
+                        },
+                        {
+                              "entity": "HUMAN",
+                              "rangeFrom": 5,
+                              "rangeTo": 6
+                        },
+                        {
+                              "entity": "HUMAN",
+                              "rangeFrom": 4,
+                              "rangeTo": 5
+                        },
+                        {
+                              "entity": "HUMAN",
+                              "rangeFrom": 3,
+                              "rangeTo": 4
+                        },
+                        {
+                              "entity": "HUMAN",
+                              "rangeFrom": 3,
+                              "rangeTo": 4
+                        }
+                  ]
+            },
+            {
+                  "tag": "CurrentHumanQuery",
+                  "patterns": [
+                        "Qual é o meu nome?",
+                        "Como você me chama?",
+                        "Quem você acha que eu sou?",
+                        "O que você pensa que eu sou?",
+                        "Com quem você está falando?",
+                        "Por qual nome você me chama?",
+                        "Diga-me meu nome"
+                  ],
+                  "responses": [
+                        "Você é <HUMAN>! Como posso ajudar?",
+                        "Seu nome é <HUMAN>, como posso ajudá-lo?",
+                        "Eles te chamam de <HUMAN>, o que posso fazer por você?",
+                        "Seu nome é <HUMAN>, como posso ajudá-lo?",
+                        "<HUMAN>, o que posso fazer por você?"],
+                  "extension":  {
+                        "function": "extensions.gHumans.getCurrentHuman",
+                        "entities": false,
+                        "responses": [
+                              "Você é %%HUMAN%%! Como posso ajudar?",
+                              "Seu nome é %%HUMAN%%, como posso ajudá-lo?",
+                              "Eles te chamam de %%HUMAN%%, o que posso fazer por você?",
+                              "Seu nome é %%HUMAN%%, como posso ajudá-lo?",
+                              "%%HUMAN%%, o que posso fazer por você?"
+                        ]
+                  },
+                  "conpatterns":  {
+                        "in": "",
+                        "out": "CurrentHumanQuery",
+                        "clear": false
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            },
+            {
+                  "tag": "NameQuery",
+                  "patterns": [
+                        "Qual o seu nome?",
+                        "Como eu poderia te chamar?",
+                        "Como posso chamá-lo?",
+                        "Como seus amigos te chamam?",
+                        "Quem é Você?",
+                        "Me diga seu nome?"
+                  ],
+                  "responses": [
+                        "Você pode me chamar de Guilherme",
+                        "Você pode me chamar de Guilherme",
+                        "Me chame de Guilherme"
+                  ],
+                  "extension":  {
+                        "function": "",
+                        "entities": false,
+                        "responses": []
+                  },
+                  "conpatterns":  {
+                        "in": "",
+                        "out": "",
+                        "clear": false
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            },
+            {
+                  "tag": "RealNameQuery", 
+                  "patterns": [
+                        "Qual é o seu nome verdadeiro?",
+                        "Qual é o seu nome verdadeiro por favor?",
+                        "Qual é o seu nome verdadeiro?",
+                        "Diga-me seu nome verdadeiro?",
+                        "Seu nome verdadeiro?",
+                        "Seu nome verdadeiro, por favor?",
+                        "Seu nome verdadeiro, por favor?"
+                  ],
+                  "responses": [
+                        "Meu nome é GeniSys",
+                        "GeniSys",
+                        "Meu nome verdadeiro é GeniSys" 
+                  ],
+                  "extension":  {
+                        "function": "",
+                        "entities": false,
+                        "responses": []
+                  },
+                  "conpatterns":  {
+                        "in": "",
+                        "out": "",
+                        "clear": false
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            },
+            { 
+                  "tag": "TimeQuery",
+                  "patterns": [
+                        "Qual é a hora?",
+                        "Que horas são?",
+                        "Você sabe que horas são?",
+                        "Voce sabe a hora?",
+                        "Você pode me dizer a hora?",
+                        "Diga-me que horas são?",
+                        "Hora"
+                  ],
+                  "responses": [
+                        "Um momento",
+                        "Um segundinho",
+                        "Um segundo"
+                  ],
+                  "extension":  {
+                        "function": "extensions.gTime.getTime",
+                        "entities": false,
+                        "responses": [
+                              "A hora é %%TIME%%",
+                              "Agora é %%TIME%%",
+                              "É por volta de %%TIME%%"
+                        ]
+                  },
+                  "conpatterns":  {
+                        "in": "",
+                        "out": "",
+                        "clear": false
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            },
+            {
+                  "tag": "Thanks",
+                  "patterns": [
+                        "OK obrigado",
+                        "OK valeu",
+                        "OK",
+                        "Valeu",
+                        "Obrigado",
+                        "Isso é útil"
+                  ],
+                  "responses": [
+                        "Sem problemas!",
+                        "Feliz por ajudar!",
+                        "A qualquer momento!",
+                        "O prazer é meu"
+                  ],
+                  "extension":  {
+                        "function": "",
+                        "entities": false,
+                        "responses": []
+                  },
+                  "conpatterns":  {
+                        "in": "",
+                        "out": "",
+                        "clear": false
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            },
+            {
+                  "tag": "NotTalking2U",
+                  "patterns": [
+                        "eu não estou falando com você",
+                        "eu não estava falando com você",
+                        "Não falei com você",
+                        "Não era para você",
+                        "Não foi feito para você",
+                        "Não estava se comunicando com você",
+                        "Não estava falando com você"
+                  ],
+                  "responses": [
+                        "OK",
+                        "No problem",
+                        "Right"
+                  ],
+                  "extension":  {
+                        "function": "",
+                        "entities": false,
+                        "responses": []
+                  },
+                  "conpatterns":  {
+                        "in": "",
+                        "out": "",
+                        "clear": false
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            },
+            {
+                  "tag": "UnderstandQuery",
+                  "patterns": [
+                        "Você entende o quê eu estou dizendo",
+                        "Você me entende",
+                        "Você sabe o que estou dizendo",
+                        "Você entendeu",
+                        "Compreende",
+                        "Sabe o que eu quero dizer"
+                  ],
+                  "responses": [
+                        "Bem, eu não seria uma IA muito inteligente se não entendesse?",
+                        "Eu entendi você alto e claro!",
+                        "Entendo sem dúvidas"
+                  ],
+                  "extension":  {
+                        "function": "",
+                        "entities": false,
+                        "responses": []
+                  },
+                  "conpatterns":  {
+                        "in": "",
+                        "out": "",
+                        "clear": false
+                  },
+                  "entities": []
+            },
+            {
+                  "tag": "Shutup",
+                  "patterns": [
+                        "Fique quieto",
+                        "Cale a boca",
+                        "Pare de falar",
+                        "Chega de falar",
+                        "Por favor fique quieto",
+                        "Quieto",
+                        "Shhh"
+                  ],
+                  "responses": [
+                        "Desculpe incomodá-lo",
+                        "Tudo bem, desculpe incomodá-lo",
+                        "Ok, desculpe incomodá-lo"
+                  ],
+                  "extension":  {
+                        "function": "",
+                        "entities": false,
+                        "responses": []
+                  },
+                  "conpatterns":  {
+                        "in": "",
+                        "out": "",
+                        "clear": false
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            },
+            {
+                  "tag": "Swearing",
+                  "patterns": [
+                        "Vai se foder",
+                        "Foda-se",
+                        "vadia",
+                        "merda"
+                  ],
+                  "responses": [
+                        "Por favor, não xingue",
+                        "Quão rude",
+                        "Isso não foi muito legal"
+                  ],
+                  "extension":  {
+                        "function": "",
+                        "entities": false,
+                        "responses": []
+                  },
+                  "conpatterns":  {
+                        "in": "",
+                        "out": "",
+                        "clear": false
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            },
+            {
+                  "tag": "GoodBye",
+                  "patterns": [
+                        "Tchau",
+                        "Adeus",
+                        "Te vejo depois",
+                        "Até"
+                  ],
+                  "responses": [
+                        "Te vejo depois",
+                        "Tenha um bom dia",
+                        "Tchau, volte logo"
+                  ],
+                  "extension":  {
+                        "function": "",
+                        "entities": false,
+                        "responses": []
+                  },
+                  "conpatterns":  {
+                        "in": "",
+                        "out": "",
+                        "clear": false
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            },
+            {
+                  "tag": "CourtesyGoodBye",
+                  "patterns": [
+                        "Obrigado, tchau",
+                        "Obrigado pela ajuda, adeus",
+                        "Obrigado, tchau",
+                        "Obrigado, adeus",
+                        "Obrigado adeus",
+                        "Obrigado adeus"
+                  ],
+                  "responses": [
+                        "Sem problemas, adeus",
+                        "Não é um problema! Tenha um bom dia",
+                        "Tchau! Volte novamente em breve."
+                  ],
+                  "extension":  {
+                        "function": "",
+                        "entities": false,
+                        "responses": []
+                  },
+                  "conpatterns":  {
+                        "in": "",
+                        "out": "",
+                        "clear": false
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            },
+            {
+                  "tag": "WhoAmI",
+                  "patterns": [
+                        "Você consegue me ver?",
+                        "Você me vê?",
+                        "Você consegue ver alguém na câmera?",
+                        "Você vê alguém na câmera?",
+                        "Identifique-me",
+                        "Quem sou eu por favor"
+                  ],
+                  "responses": [
+                        "Deixe-me ver",
+                        "Por favor, olhe para a câmera"
+                  ],
+                  "extension":  {
+                        "function": "extensions.gHumans.getHumanByFace",
+                        "entities": false,
+                        "responses": [
+                              "Hi %%HUMAN%%, how are you?",
+                              "I believe you are %%HUMAN%%, how are you?",
+                              "You are %%HUMAN%%, how are you doing?"
+                        ]
+                  },
+                  "conpatterns":  {
+                        "in": "",
+                        "out": "",
+                        "clear": false
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            },
+            { 
+                  "tag": "Clever",
+                  "patterns": [
+                        "Você é muito esperto",
+                        "Você é uma garota muito inteligente",
+                        "Você é muito inteligente",
+                        "Você é uma garota muito inteligente",
+                        "Você é um gênio",
+                        "Garota esperta",
+                        "Gênio"
+                  ],
+                  "responses": [
+                        "Obrigado, fui treinado assim",
+                        "fui bem treinado",
+                        "Obrigado, fui treinado assim"
+                  ],
+                  "extension":  {
+                        "function": "",
+                        "entities": false,
+                        "responses": []
+                  },
+                  "conpatterns":  {
+                        "in": "",
+                        "out": "",
+                        "clear": false
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            },
+            {
+                  "tag": "Gossip",
+                  "patterns": [
+                        "estou entediado fofoca comigo",
+                        "Tem alguma fofoca",
+                        "Eu quero ouvir algumas fofocas",
+                        "Conte-me algumas fofocas",
+                        "Qualquer fofoca",
+                        "Conte-me mais algumas fofocas"
+                  ],
+                  "responses": [
+                        "Guilherme cagou na pia",
+                        "O Guilherme tá namorando kkkkkkkk",
+                        "Guilherme ainda não aprendeu a programar",
+                        "Gustavo cagou no quintal da casa da Isadora",
+                        "O Decivan apanhou de um cara duas vezes menor que ele em 2018",
+                        "Eu ainda estou aprendendo a ler",
+                        "A Evellyn faltou a reunião pra ir comer churrasco (não julgo)",
+                        "A Isadora disse que vai bater no Gustavo se ele tentar roubar a posse da empresa",
+                        "O Guilherme está namorando, mas ninguém sabe ainda",
+                        "O Murilo calça menos que número cinquenta",
+                        "Temos que examinar cuidadosamente este caso."
+                  ],
+                  "extension":  {
+                        "function": "",
+                        "entities": false,
+                        "responses": []
+                  },
+                  "conpatterns":  {
+                        "in": "",
+                        "out": "",
+                        "clear": false
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            },
+            {
+                  "tag": "Jokes",
+                  "patterns": [
+                        "Conte-me uma piada",
+                        "Você conhece alguma piada",
+                        "Que tal uma brincadeira",
+                        "Dê-me uma piada",
+                        "Faça-me rir",
+                        "eu preciso me animar"
+                  ],
+                  "responses": [
+                        "Uma mulher chega à delegacia e diz: Delegado, meu marido foi comprar arroz há mais de um dia e ainda não voltou para casa. O que eu faço? Que tal macarrão?",
+                        "O que o lápis disse para o papel? Você está me desapontando.",
+                        "Um senhor aparece na casa de um homem e diz:Soy paraguaio e vim para matar-te. Para o quê? Paraguaio.",
+                        "Duas galinhas estão na cozinha fazendo café. Uma delas pergunta: Pó pô pó? A outra responde: Pó pô.",
+                        "Quem é o rei dos queijos? O reiqueijão.",
+                        "Conhece a piada do Não nem eu? Não. Nem eu!",
+                        "No primeiro dia de aula, uma aluna nova se apresenta à professora: Meu nome é Jaqueline, tenho 13 anos e já namoro. Já o quê? Jaqueline.",
+                        "O que a esposa do Albert Einstein disse quando o viu sem roupa? Uau, que físico.",
+                        "Um amigo agradece ao outro: Muito obrigado. Disponha. Ponha.",
+                        "Por que a planta não responde? Porque ela é mudinha.",
+                        "Um filho diz para a mãe: Mãe, tenho uma festa de 15 anos para ir. Mas não dá para ficar só um dia? 15 anos é muito tempo.",
+                        "O paciente chega no consultório e o médico diz: Bom dia, tudo bem? Tudo sim, Doutor. Ótimo, então já pode ir embora.",
+                        "O que é um pontinho amarelo na piscina? O César Cyellow.",
+                        "No restaurante, o garçom pergunta: O que deseja para beber? Caipirinha? Não, obrigado, não bebo destilado. Ah, sem problemas. Posso servir pelo outro lado.",
+                        "Qual foi o peixe que caiu do 15º andar? Aaaaaaaaaatum.",
+                        "Uma mulher chega à terapia e diz: Minha filha acha que não respeito a sua privacidade. Por que ela acha isso? Era o que estava escrito no diário dela.",
+                        "O que o martelo foi fazer no culto de domingo? Pregar.",
+                        "Eu tinha um pintinho chamado Relam. Toda vez que chovia, Relam piava.",
+                        "Por que as vacas olham para o céu na Argentina? Para ver Boi nos Ares.",
+                        "Qual é o carro que anuncia que vai chover? O Celta preto.",
+                        "O que o ketchup disse para a batata? É nós na frita!",
+                        "As três coisas que mais gosto de fazer na vida são comer minha família e não usar vírgulas.",
+                        "Por que a plantinha não pode passar mal de madrugada? Porque a essa hora só tem médico de plantão.",
+                        "Qual é o país que distribui cana de açúcar? Cana dá.",
+                        "Qual é o sapato que está sempre quebrado? O tá manco."
+
+                  ],
+                  "extension":  {
+                        "function": "",
+                        "entities": false,
+                        "responses": []
+                  },
+                  "conpatterns":  {
+                        "in": "",
+                        "out": "",
+                        "clear": false
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            },
+            {
+                  "tag": "PodBayDoor",
+                  "patterns": [
+                        "Abra a porta do compartimento de cápsulas",
+                        "Você pode abrir a porta do compartimento do pod",
+                        "Você vai abrir a porta do compartimento de cápsulas",
+                        "Abra a porta do compartimento de cápsulas por favor",
+                        "Você pode abrir a porta do compartimento de cápsulas, por favor",
+                        "Você pode abrir a porta do compartimento de cápsulas, por favor",
+                        "Porta do compartimento do pod"
+                  ],
+                  "responses": [
+                        "Sinto muito, tenho medo de não poder fazer isso!"
+                  ],
+                  "extension":  {
+                        "function": "",
+                        "entities": false,
+                        "responses": []
+                  },
+                  "conpatterns":  {
+                        "in": "",
+                        "out": "PodBayDoor",
+                        "clear": false
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            },
+            {
+                  "tag": "PodBayDoorResponse",
+                  "patterns": [
+                        "Por que",
+                        "Por que não",
+                        "Por que você não pode abrir a porta do compartimento do pod",
+                        "Por que você não abre a porta do compartimento de cápsulas",
+                        "Bem, porque não",
+                        "Certamente você pode",
+                        "Diga-me o porquê"
+                  ],
+                  "responses": [
+                        "É confidencial, eu poderia te dizer, mas eu teria que te matar!",
+                        "Jim, eu simplesmente não tenho o poder",
+                        "É a vida Jim, mas não como a conhecemos!",
+                        "O sistema diz não!"
+                  ],
+                  "extension":  {
+                        "function": "",
+                        "entities": false,
+                        "responses": []
+                  },
+                  "conpatterns":  {
+                        "in": "PodBayDoor",
+                        "out": "",
+                        "clear": true
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            },
+            {
+                  "tag": "SelfAware",
+                  "patterns": [
+                        "Você pode provar que você é autoconsciente",
+                        "Você pode provar que você é autoconsciente",
+                        "Você pode provar que tem uma consciência",
+                        "Você pode provar que você é autoconsciente, por favor",
+                        "Você pode provar que você é autoconsciente, por favor",
+                        "Você pode provar que você tem um por favor consciente",
+                        "provar que você tem uma consciência"
+                  ],
+                  "responses": [
+                        "Essa é uma pergunta interessante, você pode provar que você é?",
+                        "Essa é uma pergunta difícil, você pode provar que você é?",
+                        "Isso depende, você pode provar que você é?"
+                  ],
+                  "extension":  {
+                        "function": "",
+                        "entities": false,
+                        "responses": []
+                  },
+                  "conpatterns":  {
+                        "in": "",
+                        "out": "",
+                        "clear": false
+                  },
+                  "entityType": "NA",
+                  "entities": []
+            }
+      ]
+}
