@@ -1,2 +1,6 @@
+# Traduzindo o dataset
 Tradução do dataset para uma melhor exploração:
 Tentamos realizar uma tradução do dataset, porém não conseguimos bons resultados.
+
+# Utilizando um dataset ja em portugues
+Com a falha da traducao do dataset original, tentamos utilizar um dataset que ja estivesse em PT-BR, entao encontramos um e treinamos o modelo, nao conseguim,os bons resultados tambem.
