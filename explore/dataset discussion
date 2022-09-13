@@ -3,4 +3,10 @@ Tradução do dataset para uma melhor exploração:
 Tentamos realizar uma tradução do dataset, porém não conseguimos bons resultados.
 
 # Utilizando um dataset ja em portugues
-Com a falha da traducao do dataset original, tentamos utilizar um dataset que ja estivesse em PT-BR, entao encontramos um e treinamos o modelo, nao conseguim,os bons resultados tambem.
+Com a falha da traducao do dataset original, tentamos utilizar um dataset que ja estivesse em PT-BR.
+Encontramos um e treinamos o modelo, nao conseguimos bons resultados.
+
+# Aumentando o dataset
+Tentamos aumentar o dataset original para conseguir mais leque de respostas para o modelo.
+Pegamos alguns datasets semelhantes e incrementamos ao original.
+Nao funcionou como esperado.
