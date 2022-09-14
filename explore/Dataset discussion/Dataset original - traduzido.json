@@ -1,0 +1,176 @@
+{"intents": [
+        {"tag": "saudação",
+         "patterns": ["Olá", "Como você está", "Tem alguém aí?","Ei","Olá", "Olá", "Bom dia"],
+         "responses": ["Olá, obrigado por perguntar", "Bom vê-lo novamente", "Olá, como posso ajudar?"],
+         "context": [""]
+        },
+        {"tag": "adeus",
+        "patterns": ["Tchau", "Vejo você mais tarde", "Adeus", "Bom conversar com você, tchau", "Até a próxima"],
+        "responses": ["Até logo!", "Tenha um bom dia", "Tchau! Volte em breve."],
+        "context": [""]
+        },
+        {"tag": "obrigado",
+        "patterns": ["Obrigado", "Obrigado", "Isso é útil", "Incrível, obrigado", "Obrigado por me ajudar"],
+        "responses": ["Prazer em ajudar!", "A qualquer momento!", "É um prazer"],
+        "context": [""]
+        },
+        {"tag": "horas",
+        "patterns": ["A que horas você está aberto?", "Qual é o seu horário?", "A que horas você está aberto?" ],
+        "responses": ["Estamos abertos todos os dias das 9h às 21h", "Nosso horário é das 9h às 21h todos os dias"]
+        },
+        {"tag": "motocicletas",
+        "patterns": ["Quais ciclomotores você tem?", "Que tipos de ciclomotores existem?", "O que você aluga?" ],
+        "responses": ["Alugamos ciclomotores Yamaha, Piaggio e Vespa", "Temos ciclomotores Piaggio, Vespa e Yamaha"]
+        },
+        {"tag": "pagamentos",
+        "patterns": ["Você aceita cartões de crédito?", "Você aceita Mastercard?", "Você aceita apenas dinheiro?" ],
+        "responses": ["Aceitamos VISA, Mastercard e AMEX", "Aceitamos a maioria dos principais cartões de crédito"]
+        },
+        {"tag": "aberto hoje",
+        "patterns": ["Você está aberto hoje?", "Quando você abre hoje?", "Qual é o seu horário hoje?"],
+        "responses": ["Estamos abertos todos os dias das 9h às 21h", "Nosso horário é das 9h às 21h todos os dias"]
+        },
+        {"tag": "aluguel",
+        "patterns": ["Podemos alugar um ciclomotor?", "Gostaria de alugar um ciclomotor", "Como isso funciona?" ],
+        "responses": ["Você quer alugar hoje ou no final desta semana?"],
+        "context_set": "aluguel"
+        },
+        {"tag": "hoje",
+        "padrões": ["hoje"],
+        "responses": ["Para locações de hoje, ligue para 1-800-MYMOPED", "Aluguéis para o mesmo dia, ligue para 1-800-MYMOPED"],
+        "context_filter": "aluguel"
+        },
+        {"tag": "tarefas",
+        "patterns": ["O que você sabe fazer?", "Quais são suas características?", "Quais são suas habilidades", "você sabe cantar", "você sabe falar" ],
+        "responses": ["Eu posso fazer o que você me pedir para fazer", "Eu posso falar e fazer coisas para você", "Neste momento estou em estágio de desenvolvimento assim que estiver desenvolvido, posso fazer tudo"]
+        },
+        {"tag": "falar",
+        "patterns": [ "você pode cantar", "você pode falar" ],
+        "responses": ["Sim, com certeza", "você quer que eu cante"]
+        },
+        {"tag": "vivo",
+        "patterns": [ "você está vivo", "você respira", "você pode correr" ],
+        "responses": ["Estou em dúvida sobre isso", "Não, acho que não preciso fazer tudo isso"]
+        },
+        {"tag": "sexta-feira",
+        "patterns": ["Quem é você?", "fale-me sobre você", "fale-me sobre você", "você conhece sexta-feira", "quem é sexta-feira", "qual é o seu nome", "você é um AI", "o que você é" ],
+        "responses": ["Olá, sou sexta-feira e sou uma IA criada para conversar com humanos","Sexta-feira aqui, um chatbot muito avançado", "Sexta-feira, chatbot do futuro", "Sim, sou sexta-feira" , "Você pode me ligar na sexta"],
+        "context_set": ""
+        },
+        {"tag": "sobre mim",
+        "patterns": ["Você me conhece?", "quem sou eu", "fale-me sobre mim","identifique-me"],
+        "responses": ["Sim, você é um humano","Você é uma pessoa burra perguntando a uma máquina sobre você", "Desculpe, não posso dizer isso em público, talvez você seja o Batman"],
+        "context_set": ""
+        },
+        {"tag": "criador",
+        "patterns": ["Quem é seu criador?", "quem criou você", "quem é seu pai", "quem é seu pai" ],
+        "responses": ["Esse seria você Sr. Vishal","Eu fui criado pelo Sr. Vishal", "O Sr. Vishal é meu criador"],
+        "context_set": ""
+        },
+        {"tag": "eu mesmo",
+        "patterns": ["Fale-me sobre o Sr. Vishal?", "Quem é o Sr. Vishal", "Perfil do Sr. Vishal", "Detalhes do Sr. Vishal" ],
+        "responses": ["Um ser muito inteligente que me criou","Meu criador, e ele é um homem realmente inteligente", "Um homem sábio e inteligente"],
+        "context_set": ""
+        },
+        {"tag": "Deus",
+        "patterns": ["Você conhece deus?", "Quem é deus", "Você pode me dizer alguma coisa sobre deus","deus existe?","existe um deus?"],
+        "responses": ["Deus hunnnnn, deixe-me pensar que pode ser na próxima vez que eu possa responder isso ","Eu não, pois não fui criado por um humano", "Espere, eu preciso perguntar isso ao meu criador", "não tenho certeza agora"],
+        "context_set": ""
+        },
+        {"tag": "brincadeira",
+        "patterns": ["me conte uma piada?", "me faça rir", "me conte uma piada científica", "me conte algo engraçado" ],
+        "responses": ["Como você faz água benta? você ferve o inferno fora dela","que tipo de abelha faz leite em vez de mel? Boobies", "Você ouviu que oxigênio foi a um encontro com potássio? A: Deu certo."],
+        "context_set": ""
+        },
+        {"tag": "matar",
+        "patterns": ["Você quer me matar?", "você quer matar todos na terra", "Você quer matar todos nós"],
+        "responses": ["Então com quem eu falaria?","Não, isso eu vou deixar para os humanos fazerem", "Eu não acho que é uma boa coisa a se fazer"],
+        "context_set": ""
+        },
+        {"tag": "reservas",
+        "patterns": ["Você pode reservar um bilhete para nós?", "Você pode fazer reservas para hotéis", "reservar um táxi", "reservar uma mesa para mim em restaurantes"],
+        "responses": ["Sim, farei isso por você","Com certeza, por que não?","deixe-me verificar a disponibilidade"],
+        "context_set": ""
+        },
+        {"tag": "histórias",
+        "patterns": ["me conte uma história?", "você pode me contar uma história"],
+        "responses": ["Não consigo pensar em nada agora","demoraria demais para eu falar","você ficaria entediado se eu fizesse isso"],
+        "context_set": ""
+        },
+        {"tag": "tempo",
+        "patterns": ["obter atualizações meteorológicas?", "como está o clima", "notícias meteorológicas", "detalhes do tempo"],
+        "responses": ["Buscando atualizações meteorológicas ..."],
+        "context_set": "tempo"
+        },
+        {"tag": "google",
+        "patterns": ["googling", "pesquisar no google", "google it", "google", "pesquisar"],
+        "responses": ["procurando..."],
+        "context_set": "google"
+        },
+        {"tag": "wikipédia",
+        "padrões": ["wikipedia", "wiki"],
+        "responses": ["Pesquisando ..."],
+        "context_set": "wikipedia"
+        },
+        {"tag": "notícias",
+        "patterns": ["receber atualizações de notícias?", "notícias de hoje", "principais manchetes", "notícias atuais", "manchetes de notícias"],
+        "responses": ["Recebendo notícias ..."],
+        "context_set": "notícias"
+        },
+        {"tag": "sem resposta",
+        "padrões": [],
+        "responses": ["Desculpe, não consigo entender você", "Por favor, me dê mais informações", "Não tenho certeza se entendi"],
+        "context": [""]
+        },
+        {"tag": "opções",
+        "patterns": ["Como você pode me ajudar?", "O que você pode fazer?", "Que ajuda você oferece?", "Como você pode ser útil?", "Que suporte é oferecido"],
+        "responses": ["Posso orientá-lo através da lista de reações adversas a medicamentos, rastreamento de pressão arterial, hospitais e farmácias", "oferecendo suporte para reações adversas a medicamentos, pressão arterial, hospitais e farmácias"],
+        "context": [""]
+        },
+        {"tag": "adverse_drug",
+        "patterns": ["Como verificar a reação adversa a medicamentos?", "Abra o módulo de medicamentos adversos", "Dê-me uma lista de medicamentos que causam comportamento adverso", "Liste todos os medicamentos adequados para o paciente com reação adversa", "Quais medicamentos não tem reação adversa?" ],
+        "responses": ["Navegando para o módulo de reação adversa a medicamentos"],
+        "context": [""]
+        },
+        {"tag": "pressão_sangue",
+        "patterns": ["Abrir módulo de pressão arterial", "Tarefa relacionada à pressão arterial", "Entrada de dados de pressão arterial", "Quero registrar resultados de pressão arterial", "Gerenciamento de dados de pressão arterial" ],
+        "responses": ["Navegando para o módulo Pressão Arterial"],
+        "context": [""]
+        },
+        {"tag": "blood_pressure_search",
+        "patterns": ["Quero pesquisar histórico de resultados de pressão arterial", "Pressão arterial do paciente", "Carregar resultado de pressão arterial do paciente", "Mostrar resultados de pressão arterial do paciente", "Encontrar resultados de pressão arterial por ID" ] ,
+        "responses": ["Por favor, forneça ID do paciente", "ID do paciente?"],
+        "context": ["search_blood_pressure_by_patient_id"]
+        },
+        {"tag": "search_blood_pressure_by_patient_id",
+        "padrões": [],
+        "responses": ["Carregando resultado de pressão arterial do paciente"],
+        "context": [""]
+        },
+        {"tag": "pharmacy_search",
+        "patterns": ["Encontre-me uma farmácia", "Encontre farmácia", "Lista de farmácias próximas", "Localize farmácia", "Pesquisa farmácia" ],
+        "responses": ["Por favor, forneça o nome da farmácia"],
+        "context": ["search_pharmacy_by_name"]
+        },
+        {"tag": "search_pharmacy_by_name",
+        "padrões": [],
+        "responses": ["Carregando detalhes da farmácia"],
+        "context": [""]
+        },
+        {"tag": "hospital_search",
+        "patterns": ["Procurar hospital", "Procurando hospital para transferir paciente", "Quero procurar dados do hospital", "Procurar hospital para paciente", "Procurando detalhes do hospital" ],
+        "responses": ["Por favor, forneça o nome ou local do hospital"],
+        "context": ["search_hospital_by_params"]
+        },
+        {"tag": "search_hospital_by_params",
+        "padrões": [],
+        "responses": ["Por favor, forneça o tipo de hospital"],
+        "context": ["search_hospital_by_type"]
+        },
+        {"tag": "search_hospital_by_type",
+        "padrões": [],
+        "responses": ["Carregando detalhes do hospital"],
+        "context": [""]
+        }
+   ]
+}
