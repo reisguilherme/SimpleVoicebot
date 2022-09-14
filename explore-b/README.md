@@ -1,3 +1,3 @@
-# Explore-b Branch
+# Explore-b Folder
 
-A branch EXPLORE-b é o local onde se armazenam novas análises exploratórias, ou seja, novas investigaçoes sobre o que é preciso realizar para a obtenção/melhoria do produto final.
+Pasta que contem as novas discussoes sobre como aprimorar nosso projeto e desenvolver o novo modelo (model discussion).
