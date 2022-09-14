@@ -1,3 +1,3 @@
 # Model Discussion - Explore B:
 
-Pesquisa sobre Speech To Text (STT)
+Pesquisa sobre o modelo de Speech To Text (STT)
