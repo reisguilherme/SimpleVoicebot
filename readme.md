@@ -14,8 +14,8 @@ Projeto FMF de chatbot em Python com adição de originalidade, ao transformá-l
   
   ![git_workflow](https://user-images.githubusercontent.com/87432238/190300513-f57058da-a6ce-4708-bb74-a6c42343bf84.png)
   
-  Fase exploratória: a fase exploratória consiste na discussão sobre o conjunto de dados a ser utilizado, as ferramentas e as melhores abordagens para desenvolvimento do modelo. O trabalho desenvolvido aqui deve ser reprodutível e bem explicado para facilitar a vida de outros membros.
+  Fase exploratória (explore branch): a fase exploratória consiste na discussão sobre o conjunto de dados a ser utilizado, as ferramentas e as melhores abordagens para desenvolvimento do modelo. O trabalho desenvolvido aqui deve ser reprodutível e bem explicado para facilitar a vida de outros membros.
   
-  Fase de refatoração: fase de desenvolvimento do projeto, como codificação e uso das ferramentas definidas. 
+  Fase de refatoração (refactor branch): fase de desenvolvimento do projeto, como codificação e uso das ferramentas definidas. 
 
 
